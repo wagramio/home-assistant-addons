@@ -1,0 +1,22 @@
+name: KNX Forensics
+version: "0.1.29"
+slug: knx_forensics
+description: Records the KNX bus, compares it with the ETS project and shows faults – free version included, Pro with a licence key.
+url: https://wagramio.at
+arch:
+  - aarch64
+  - amd64
+image: ghcr.io/wagramio/knx-forensics-collector
+init: false
+startup: application
+boot: auto
+# Multicast (Suche nach Schnittstellen, KNX-Routing) braucht das Host-Netz
+host_network: true
+ingress: true
+ingress_port: 8780
+panel_icon: mdi:magnify-scan
+panel_title: KNX Forensics
+options:
+  allow_send: false
+schema:
+  allow_send: bool
