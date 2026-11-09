@@ -1,0 +1,16 @@
+# KNX Forensics Collector – fester Collector in der Anlage
+# Start:   docker compose up -d
+# Öffnen:  http://<IP-des-Geräts>:8780
+services:
+  knx-forensics:
+    image: ghcr.io/wagramio/knx-forensics-collector:latest
+    container_name: knx-forensics
+    restart: unless-stopped
+    # Host-Netz: nötig für die Suche nach KNX-Schnittstellen und für KNX-Routing (Multicast)
+    network_mode: host
+    volumes:
+      - ./knx-forensics-data:/data
+    environment:
+      - TZ=Europe/Vienna
+      # Senden auf den KNX-Bus erlauben (Standard: gesperrt). Nur in vertrauenswürdigen Netzen auf 1 setzen.
+      - KF_ALLOW_SEND=0
