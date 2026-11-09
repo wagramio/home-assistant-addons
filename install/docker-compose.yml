@@ -14,3 +14,5 @@ services:
       - TZ=Europe/Vienna
       # Senden auf den KNX-Bus erlauben (Standard: gesperrt). Nur in vertrauenswürdigen Netzen auf 1 setzen.
       - KF_ALLOW_SEND=0
+      # Zugangskennwort für den Zugriff über das Netz (empfohlen, z. B. bei Kunden): leer = ohne Kennwort
+      - KF_PASSWORD=

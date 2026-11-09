@@ -1,5 +1,5 @@
 name: KNX Forensics
-version: "0.1.29"
+version: "0.1.30"
 slug: knx_forensics
 description: Records the KNX bus, compares it with the ETS project and shows faults – free version included, Pro with a licence key.
 url: https://wagramio.at
@@ -18,5 +18,7 @@ panel_icon: mdi:magnify-scan
 panel_title: KNX Forensics
 options:
   allow_send: false
+  password: ""
 schema:
   allow_send: bool
+  password: password?

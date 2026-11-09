@@ -13,3 +13,4 @@ Records your KNX bus, compares it with the ETS project and shows what is wrong â
 ## Notes
 - The add-on uses the host network so that interface discovery and KNX routing (multicast) work.
 - Data stays in Home Assistant (`/data`) and is included in Home Assistant backups. Nothing is sent to WAGRAM/IO except the licence check for Pro.
+- `password` (optional): access password for opening KNX Forensics from other devices on the network. Recommended at customer sites.
